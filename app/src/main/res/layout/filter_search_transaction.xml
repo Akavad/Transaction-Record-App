@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="Search by"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/cbparticular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Particular"
+        android:textSize="14sp"
+        android:layout_below="@+id/tvheading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actvparticular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:hint="enter particular"
+        android:layout_alignBaseline="@+id/cbparticular"
+        android:layout_alignBottom="@+id/cbparticular"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:id="@+id/cbdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Date"
+        android:textSize="14sp"
+        android:layout_below="@+id/actvparticular"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/etdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cbdate"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/cbdate"
+        android:layout_toRightOf="@+id/cbdate"
+        android:hint="dd/mm/yyyy"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/cbmonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etdate"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/etdate"
+        android:layout_toRightOf="@+id/etdate"
+        android:text="Month"
+        android:textSize="14sp" />
+
+    <Spinner
+        android:id="@+id/spmonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cbmonth"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:saveEnabled="false"/>
+
+    <CheckBox
+        android:id="@+id/cbdebit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cbdate"
+        android:layout_marginTop="16dp"
+        android:text="DebitAmount"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/cbcredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cbdebit"
+        android:layout_alignLeft="@+id/cbmonth"
+        android:layout_alignStart="@+id/cbmonth"
+        android:text="CreditAmount"
+        android:textSize="14sp"
+        android:saveEnabled="false"/>
+
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cbcredit"
+        android:layout_alignLeft="@+id/etdate"
+        android:layout_alignRight="@+id/cbcredit"
+        android:layout_alignStart="@+id/etdate"
+        android:layout_below="@+id/cbcredit"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="SEARCH"
+        android:textColor="@android:color/white" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/btnsearch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
